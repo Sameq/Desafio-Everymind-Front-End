@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GERENCIAMENTO DE ITENS</title>
+    <link rel="stylesheet" href="../public/css/gerenciamento.css">
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            atualizarTabela();
+        });
+    </script>
+    <div id="container">
+        <header>
+            <div class="inicio">
+                <img class="logo" src="../public/imagem/nsports.png" alt="logotipo">
+                <h1 id="titulo">NUNES SPORTS</h1>
+            </div>
+        </header>
+        <!--Area de Pesquisa-->
+        <div id="pesquisa">
+            <h1>GERENCIAMENTO</h1>
+            <form action="/sua-pagina-de-processamento" method="get">
+                <input type="text" id="termo" name="termo" placeholder="Digite o termo de pesquisa" oninput="pesquisarItem()" required
+                    class="termo">
+                <select class="seletor" name="campo">
+                    <option value="nome">Nome</option>
+                    <option value="codigo">Codigo</option>
+                </select>
+            </form>
+            <div class="divider"></div>
+        </div>
+        <!--Tabela de alunos-->
+        <div id="caixa">
+
+            <!-- Tabela de alunos -->
+            <table class="customTable" id="tabelaItens">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Código</th>
+                        <th>Descrição</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+            </table>
+
+            <div id="botao">
+                <button id="add-item"> <img id="add" src="../public/imagem/add.png" alt="+">Item</button>
+            </div>
+
+            <dialog>
+                <div id="modaladd">
+                    <h2>Adicionar Item</h2>
+                    <input type="text" id="nome_input" placeholder="Nome" autocomplete="off" class="alunoemailadd">
+                    <input type="text" id="codigo_input" placeholder="Código" autocomplete="off" class="numberitemadd">
+                    <input type="text" id="descricao_input" placeholder="Descrição" autocomplete="off" class="numberitemadd">
+                    <input type="text" id="preco_input" placeholder="Preço" autocomplete="off" class="numberitemadd">
+                    <div id="botoes">
+                    <button id="ok" onclick="adicionarItem()">Adicionar</button>
+                    <button id="cancela">cancelar</button>
+            </dialog>
+            <dialog id ="dialogEdit">
+                <div id="modalEditar">
+                    <h2>Editar Item</h2>
+                    <input type="text" id="nome_editar" placeholder="Novo Nome" autocomplete="off" class="alunoemailadd">
+                    <input type="text" id="codigo_editar" placeholder="Novo Código" autocomplete="off" class="numberitemadd">
+                    <input type="text" id="descricao_editar" placeholder="Nova Descrição" autocomplete="off" class="numberitemadd">
+                    <input type="text" id="preco_editar" placeholder="Novo Preço" autocomplete="off" class="numberitemadd">
+                    <div id="botoes">
+                        <button id="salvar">Salvar</button>
+                        <button id="cancelar">Cancelar</button>
+                    </div>
+                </div>
+            </dialog>    
+    <script src="../public/js/gerenciamento.js"></script>
+</body>
+
+</html>

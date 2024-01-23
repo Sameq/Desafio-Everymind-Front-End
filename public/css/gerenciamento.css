@@ -1,0 +1,442 @@
+/* HTML e corpo da página */
+html,
+body {
+    background: #201B2C;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex-wrap: wrap;
+    transition: all 0.3s ;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+/* Cabeçalho da página */
+header {
+    position: fixed;
+    top: 0;
+    background: #201B2C;
+    display: flex;
+    height: 4.375rem;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+
+.inicio {
+    display: flex; 
+}
+
+/* Contêiner principal da página */
+#container {
+    margin-left: 3.9rem;
+    margin-top: 5rem;
+    width: 94%;
+    height: 28.625rem;
+    display: grid;
+    justify-items: center;
+    transition: margin-left 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+}
+ /* Area de Pesquisa */
+#pesquisa {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 2rem;
+    color: #FFFFFF;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#caixa {
+    /* padding: 1.5rem; */
+    display: flex;
+    width: 90%;
+    margin-left: -10%;
+    background-color: #2D2840;
+    filter: drop-shadow(1.84px 5.52px 17.5px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+form {
+    padding-left: 17rem;
+}
+
+.seletor {
+    border: 0;
+    width: 12.875rem;
+    height: 2.5rem;
+    background-color: #2CD986;
+    color: #ffffff;
+    font-size: 0.813rem;
+    border-radius: 1.4375rem;
+    padding-left: 1rem;
+    margin-left: 1.6rem;
+}
+
+.termo {
+    width: 12.875rem;
+    height: 2.5rem;
+    border-radius: 1.625rem;
+    border: 1px solid #D9D9D9;
+    background: #FFF;
+    padding-left: 2rem;
+}
+
+
+.divider {
+    width: 64.25rem;
+    height: .125rem;
+    background-color: #4B4B4B;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+.botaoEditar {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.botaoEditar img{
+    width: 20px;
+}
+.botaoExcluir {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.botaoExcluir img{
+    width: 20px;
+    margin-left: 20px;
+}
+
+ /* Tabela de alunos */
+table.customTable {
+    width: 90%;
+    background-color: #2D2840;
+    border-collapse: collapse;
+    border-width: 2px;
+    border-color: #4B4B4B;
+    color: #FFFFFF;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+table.customTable td,
+table.customTable th {
+    border-width: 2px;
+    border-color: #4B4B4B;
+    border-style: solid;
+    padding: 5px;
+}
+
+table.customTable thead {
+    background-color: #4E466C;
+}
+
+.quatro {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.quatro img {
+    width: 1.3rem;
+}
+
+#titulo {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 1);
+    margin: 0;
+    padding-top: 0.8rem;
+}
+
+.logo {
+    max-width: 60px;
+    max-height: 60px;
+    padding-right: 1rem;
+    padding-left: 1.25rem;
+    border-radius: 40%;
+}
+ /* Menu da pagina */
+ #menu {
+    gap: .8125rem;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: #201B2C;
+    width: 3.86rem;
+    height: 100%;
+    border-right: 1px solid #4B4B4B;
+    transition: width 0.3s;
+    z-index: 4;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    padding: .375rem 1.125rem;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content:flex-start;
+    align-self: center;
+}
+
+.menu-item:hover {
+    width: 100%;
+    background-color: #2D2840;
+}
+
+.menu-text {
+    display: none;
+    padding-left: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1rem;
+    color: rgba(117, 117, 117);
+    font-family: 'Poppins', sans-serif
+}
+
+#menu:hover {
+    width: 15rem;
+    z-index: 3;
+}
+
+#menu:hover #separator {
+    width: 12rem;
+    transition: width ease;
+    margin: .875rem;
+}
+
+#menu:hover .menu-text {
+    display: flex;
+}
+
+#menu:hover + #container {
+    margin-left: 13.45rem;
+}
+
+#home, #ajuda {
+    margin-top: 2rem;
+    padding: 0.625rem 1.2rem;
+
+}
+
+#not {
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 0.625rem 1rem;
+}
+
+#perfilopc {
+    width: 2.53419rem;
+    height: 2.53419rem;
+}
+
+#menu-icon{
+    padding-top: 1rem;
+    padding-left: 1.27rem;
+}
+
+#separator{
+    border-top: 1px solid #666;
+    margin: 1rem;
+    width: 1.125rem;
+    align-self: center;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item img {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+#menu:hover {
+    width: 15rem;
+    z-index: 3;
+}
+
+#menu:hover .menu-text {
+    display: flex;
+}
+
+#not {
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 0.625rem 3rem;
+}
+
+#perfilopc {
+    width: 2.53419rem;
+    height: 2.53419rem;
+}
+
+#add-item{
+    cursor: pointer;
+    display: flex;
+    color: #FFF;
+    border: 0;
+    width: 174px;
+    height: 40px;
+    border-radius: 23px;
+    background: #2CD986;
+    align-items:center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+#add-aluno:hover {
+background-color: #1D8F58;
+display: flex;
+align-items: center;
+}
+
+#botao{
+padding-top: 8%tabelaItens;
+width: 100%;
+display: flex;
+justify-content: flex-end;
+padding-right: 7rem;
+}
+
+#add{
+padding-right: 2rem;
+height: 2rem;
+}
+
+  /* estilo do modal*/
+
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+#tabelaItens td{
+    text-align: center;
+}
+#modalEditar{
+    margin-left: 115px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #2D2840;
+    color: #FFF;
+    border-radius: .625rem;
+    border: none;
+    width: 50%;
+    height: 50%;
+}
+#dialogEdit {
+    font-family: 'Poppins', sans-serif;
+    background-color: #2D2840;
+    color: #FFF;
+    border-radius: .625rem;
+    border: none;
+    width: 50%;
+    height: 50%;
+}
+
+dialog {
+    font-family: 'Poppins', sans-serif;
+    background-color: #2D2840;
+    color: #FFF;
+    border-radius: .625rem;
+    border: none;
+    width: 50%;
+    height: 50%;
+}
+
+
+#modaladd{
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modalEditar {
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    align-items: center;  
+    width: 70%;
+    height: 90%;
+}
+
+#salvar,#cancelar{
+    padding: .625rem;
+    margin: 1.5625rem .625rem;
+    background-color: #4E466C;
+    color: #FFF;
+    border: none;
+    border-radius: 1.875rem;
+    cursor: pointer;
+}
+#ok,#cancela{
+    padding: .625rem;
+    margin: 1.5625rem .625rem;
+    background-color: #4E466C;
+    color: #FFF;
+    border: none;
+    border-radius: 1.875rem;
+    cursor: pointer;
+}
+#salvar:hover,#cancelar:hover{
+    background-color:rgba(0, 0, 0, 0.25);
+}
+#ok:hover,#cancela:hover{
+    background-color:rgba(0, 0, 0, 0.25);
+}
+#nome_editar{
+    width: 80%;
+    height: 1.875rem;
+}
+#codigo_editar{
+    width: 80%;
+    height: 1.875rem;
+}
+#descricao_editar{
+    width: 80%;
+    height: 1.875rem;
+}
+#preco_editar{
+    width: 80%;
+    height: 1.875rem;
+}
+
+#nome_input{
+    width: 80%;
+    height: 1.875rem;
+}
+#codigo_input{
+    width: 80%;
+    height: 1.875rem;
+}
+#descricao_input{
+    width: 80%;
+    height: 1.875rem;
+}
+#preco_input{
+    width: 80%;
+    height: 1.875rem;
+}
